@@ -1,0 +1,13 @@
+<h1><%=@dish.name%></h1>
+<h2>Created by world renowned chef <%=@dish.chef.name%></h2>
+
+<h2>List of Ingredients:</h2>
+<ol>
+<%@dish.ingredients.each do |ingredient|%>
+    <section class="ingredient-<%=ingredient.id%>">
+        <li><%=ingredient.name%></li>
+    </section>
+<%end%>
+</ol>
+
+<p>Total Calories for this dish: <%=@dish.calorie_count%></p>

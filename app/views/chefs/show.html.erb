@@ -1,0 +1,10 @@
+<h1><%=@chef.name%></h1>
+
+<h3>Popular dishes created by this marvelous chef:</h3>
+<ol>
+<%@chef.dishes.each do |dish|%>
+   <li><%=dish.name%></li>
+<%end%>
+</ol>
+
+<%=link_to "All ingredients used in these dishes", "/chefs/#{@chef.id}/ingredients"%>
